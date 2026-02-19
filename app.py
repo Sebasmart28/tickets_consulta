@@ -96,8 +96,8 @@ def consultar_ticket():
             return {"success": False, "message": "Ticket no encontrado"}
 
         estado = ticket.get("Estado_Final", "Sin estado")
-        fecha_creacion = ticket.get("Fecha_creacion", "Sin fecha")
-        fecha_cierre = ticket.get("Fecha_cierre") or "Sin cerrar"
+        fecha_creacion = ticket.get("fecha", "Sin fecha")
+        fecha_cierre = ticket.get("fecha_cierre") or "Sin cerrar"
         comment = ticket.get("Comment") or "Sin comentar"
 
         return {
